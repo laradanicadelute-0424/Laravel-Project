@@ -88,12 +88,16 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-            $validated = $request->validated();
-
-            $post->update($validated); 
-
-            return redirect()->route('posts.show', $post)
-                            ->with('success', 'Post updated successfully!');
+            $validated = $request->validate([
+            'title' => ['required', 'string', 'max:255'],
+            'content' => ['required', 'string'],
+           
+        ]);
+       
+        $post->update($validated); 
+        
+        return redirect()->route('posts.show', $post)
+                         ->with('success', 'Post updated successfully!');
     }
 
     /**

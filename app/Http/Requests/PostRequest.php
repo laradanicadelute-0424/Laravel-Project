@@ -26,6 +26,6 @@ class PostRequest extends FormRequest
             'content' =>['required','string','min: 20'],
             // 'published_at' => ['nullable','date'],
             // 'updated_at' => ['nullable', 'date'],
-                ];
+           ];
     }
 }

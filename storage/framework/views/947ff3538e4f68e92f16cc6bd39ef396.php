@@ -30,9 +30,8 @@
                         <th scope="row"><?php echo e($posts->firstItem() + $index); ?></th>
                         
                         <td>
-                           <?php echo e($post->title); ?>
-
-                            <!-- <a href="<?php echo e(route('posts.show', $post)); ?>"><?php echo e($post->title); ?></a> -->
+                           <!-- <?php echo e($post->title); ?> -->
+                            <a href="<?php echo e(route('posts.show', $post)); ?>"><?php echo e($post->title); ?></a>
                         </td>
                         
                       

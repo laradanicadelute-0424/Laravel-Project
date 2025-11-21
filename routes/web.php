@@ -12,7 +12,7 @@ Route::get('/', function () {
 
 Auth::routes(['verify' => true]); 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [PostController::class, 'index'])->name('posts');
 
 Route::resource('posts', PostController::class)->only(['create', 'store', 'edit', 'update', 'destroy'])->middleware('auth');
 

@@ -30,8 +30,8 @@
                         <th scope="row">{{ $posts->firstItem() + $index }}</th>
                         
                         <td>
-                           {{ $post->title }}
-                            <!-- <a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a> -->
+                           <!-- {{ $post->title }} -->
+                            <a href="{{ route('posts.show', $post) }}">{{ $post->title }}</a>
                         </td>
                         
                       {{--Limit Content characters--}}

@@ -41,6 +41,9 @@
                    <button type="submit" class="btn btn-primary">Post</button>
                </div>
            </form>
+
+             <a href="{{ route('posts.index') }}" class="btn btn-secondary">← Back to all posts</a>
+
        </div>
    </div>
 @endsection
